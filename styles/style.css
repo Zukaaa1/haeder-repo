@@ -127,7 +127,7 @@ a {
   color: white;
 }
 
-/* Code */
+/* !Code */
 
 html {
   scroll-behavior: smooth;
@@ -157,9 +157,41 @@ header {
   padding: 0px 135px;
 }
 
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background-color: #333333;
+}
+
 .nav-container {
   display: flex;
   gap: 56px;
+}
+
+/* Mobile Navigation */
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* right: -100%; */
+  width: 70%;
+  height: 100%;
+  background-color: #f4f4f4;
+  color: black;
+  z-index: 1000;
+}
+
+.mobile-menu a {
+  color: black;
 }
 
 /* Main */
@@ -195,8 +227,14 @@ section {
 
 /* ფრჩხილებში რა ზომასაც დავწერ, მარტო იმ ზომაზე იმოქმდებს ჩემს მიერ დაწერილი კოდი */
 @media (max-width: 880px) {
-  nav {
+  .desktop-menu {
     display: none;
+  }
+  .burger {
+    display: flex;
+  }
+  .mobile-menu {
+    display: flex;
   }
 }
 
